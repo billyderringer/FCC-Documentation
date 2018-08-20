@@ -1,0 +1,92 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+#main-doc {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; }
+  #main-doc #left-col {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    background-color: #999;
+    padding-left: 10px; }
+    #main-doc #left-col nav {
+      display: flex;
+      flex-direction: column; }
+      #main-doc #left-col nav header {
+        color: #ff6600;
+        background-color: #737373;
+        padding: 0 10px; }
+      #main-doc #left-col nav div {
+        display: flex;
+        flex-direction: column; }
+        #main-doc #left-col nav div a {
+          text-decoration: none;
+          color: #fff;
+          padding: 10px 20px; }
+          #main-doc #left-col nav div a:hover {
+            color: #ff6600;
+            background-color: #737373; }
+  #main-doc #right-container {
+    width: 100%;
+    height: 100%;
+    overflow: auto; }
+    #main-doc #right-container #right-col {
+      padding: 0 20px; }
+      #main-doc #right-container #right-col #teacher-route {
+        margin-top: 20px; }
+      #main-doc #right-container #right-col .routes {
+        margin: 0; }
+
+@media all and (max-width: 991px) {
+  #main-doc {
+    flex-direction: column; }
+    #main-doc #left-col {
+      width: 100%;
+      height: auto;
+      padding: 0; }
+      #main-doc #left-col nav {
+        width: 100%;
+        flex-direction: column; }
+        #main-doc #left-col nav header {
+          display: flex;
+          flex-direction: row;
+          align-items: center; }
+          #main-doc #left-col nav header h2 {
+            margin: 0;
+            padding: 5px; }
+        #main-doc #left-col nav div {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 5px; }
+          #main-doc #left-col nav div a {
+            font-size: 90%; } }
+@media all and (max-width: 767px) {
+  #main-doc #left-col nav div a {
+    font-size: 75%; } }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.code-card {
+  display: flex;
+  flex-direction: column;
+  color: #737373;
+  background-color: #e6e6e6;
+  padding: 10px;
+  border-radius: 5px; }
+  .code-card code {
+    padding: 3px 0; }
+
+.ref-link {
+  text-decoration: none;
+  color: #ff6600; }
+  .ref-link:hover {
+    text-decoration: underline; }
+
+/*# sourceMappingURL=style.css.map */

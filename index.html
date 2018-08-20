@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FCC Documentation Challenge</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <main id="main-doc">
+        <div id="left-col">
+            <nav id="navbar">
+                <header>
+                    <h2>Contents:</h2>
+                </header>
+                <div>
+                    <a class="nav-link"
+                       href="#hsk-12">HSK-12</a>
+                    <a class="nav-link"
+                       href="#installation">Installation</a>
+                    <a class="nav-link"
+                       href="#tech_used">Tech Used</a>
+                    <a class="nav-link"
+                       href="#features">Features</a>
+                    <a class="nav-link"
+                       href="#use_api">Use API</a>
+                </div>
+            </nav>
+        </div>
+        <div id="right-container">
+            <div id="right-col">
+                <section class="title center">
+                    <h1>HSK-12 API Docs</h1>
+                </section>
+
+                <section class="main-section"
+                         id="hsk-12">
+                    <header>
+                        <h2>HSK-12</h2>
+                    </header>
+                    <p>
+                        <a class="ref-link"
+                           href="https://github.com/billyderringer/hsk-12"
+                           target="_blank">HSK-12
+                        </a> is a custom API that I built to serve as the backend for an open source homeschool content management system called
+                        <a class="ref-link"
+                           href="https://github.com/billyderringer/Homeschool-Hub.git"
+                           target="_blank">Homeschool Hub
+                        </a> (in development).
+                    </p>
+                </section>
+
+                <section class="main-section" id="installation">
+                    <header>
+                        <h2>Installation</h2>
+                    </header>
+                    <p>
+                        Install HSK-12 API before running Homeschool Hub. MongoDB must be running before launching the server.
+                    </p>
+                    <div class="code-card">
+                        <code>$ git clone https://github.com/billyderringer/hsk-12.git</code>
+                        <code>$ cd hsk-12</code>
+                        <code>$ npm install</code>
+                        <code>Start MongoDB server</code>
+                        <code>$ npm run dev</code>
+                    </div>
+                </section>
+
+                <section class="main-section" id="tech_used">
+                    <header>
+                        <h2>Tech Used</h2>
+                    </header>
+                    <p>Built with:</p>
+                    <ul>
+                        <li>Node.js - v 8.9.4</li>
+                        <li>Express - v 4.16.2</li>
+                        <li>MongoDB - v 3.6.3</li>
+                        <li>Mongoose - v 4.13.6</li>
+                    </ul>
+                </section>
+
+                <section class="main-section" id="features">
+                    <header>
+                        <h2>Features</h2>
+                    </header>
+                    <p>You can use this API as a standalone or combined with <a href="https://github.com/billyderringer/Homeschool-Hub" class="ref-link">Homeschool Hub</a> (in development).</p>
+                </section>
+
+                <section class="main-section" id="use_api">
+                    <header>
+                        <h2>Use API</h2>
+                    </header>
+                    <div id="logic">
+                        <h3>Logic:</h3>
+                        <ul>
+                            <li>Create teacher</li>
+                            <li>Create school terms in specified teacher</li>
+                            <li>Create students in specified term</li>
+                            <li>Create subjects in specified student</li>
+                            <li>Create assignments in specified subject</li>
+                        </ul>
+                    </div>
+                    <h3>Routes:</h3>
+                    <div class="code-card">
+                        <code>Base URL: http://localhost:3005/api/v1</code>
+                    </div>
+                    <div id="teacher-route">
+                        <h4 class="routes">/teacher</h4>
+                        <p>/register - register new account</p>
+                        <p>/login - returns jwt</p>
+                        <p>/logout</p>
+                        <p>/me - returns teacher ObjectId</p>
+                        <p>/teacherId - get teacher by id</p>
+                        <p>/update/teacherId - update teacher info</p>
+                        <p>/remove/teacherId - delete teacher and all children</p>
+                    </div>
+                    <div id="other-routes">
+                        <h4 class="routes">/term</h4>
+                        <h4 class="routes">/student</h4>
+                        <h4 class="routes">/subject</h4>
+                        <h4 class="routes">/assignment</h4>
+                        <p>/create/parentId - create new element</p>
+                        <p>/parent/elementId - get all elements in parent</p>
+                        <p>/elementId - get element by elementId</p>
+                        <p>/update/elementId - update element by elementId</p>
+                        <p>/remove/elementId - remove element and children by elementId</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
